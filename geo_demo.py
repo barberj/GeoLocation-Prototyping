@@ -10,6 +10,7 @@ Playing around with geolocation, cherry py and google maps
 
 import os, logging
 log = logging.getLogger(__name__)
+current_dir = os.path.dirname(os.path.abspath(__file__))
 
 import cherrypy
 
@@ -21,7 +22,7 @@ class GeoDemo:
                 <html>
                     <head>
                         <title>%s</title>
-                        <script type="text/javascript" src="geo.js"></script>
+                        <script type="text/javascript" src="public/js/geo.js"></script>
                     </head>
                     <body>
                 ''' % self.title
@@ -42,12 +43,10 @@ class GeoDemo:
                 self.footer()
 
 if __name__ == '__main__':
-    current_dir = os.path.dirname(os.path.abspath(__file__))
+    conf = os.path.join(current_dir,"geo.ini")
+
     log.debug("Current Working Directory %s" % current_dir)
     cherrypy.log("Current Working Directory %s" % current_dir)
-    conf = { '/geo.js': {
-        'tools.staticfile.on' : True, 
-        'tools.staticfile.filename' : os.path.join(current_dir,'public/js/geo.js')
-        }
-    }
+    cherrypy.log("Using configuration file %s" % conf)
+
     cherrypy.quickstart(GeoDemo(),'/',config=conf)
