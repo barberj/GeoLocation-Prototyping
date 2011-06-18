@@ -3,6 +3,7 @@
 """
 Author Justin Barber
 2011 June
+git@github.com:barberj/GeoLocation-Prototyping.git
 
 Playing around with geolocation, cherry py and google maps
 """
