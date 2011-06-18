@@ -1,0 +1,9 @@
+*.pyc
+data
+.project
+.pydevproject
+*.log
+*.log.20*
+.settings
+*.swp
+*.db
