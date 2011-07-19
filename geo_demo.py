@@ -23,6 +23,7 @@ class GeoDemo:
                     <head>
                         <title>%s</title>
                         <script type="text/javascript" src="public/js/geo.js"></script>
+                        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
                     </head>
                     <body>
                 ''' % self.title
@@ -39,7 +40,9 @@ class GeoDemo:
                 '''<h2>Geo Demo!</h2>
                 <script language="javascript">
                     getGeoLocal();
-                </script>''' + \
+                </script>
+                <div id=map style="width: 500px; height: 500px"></div>
+                ''' + \
                 self.footer()
 
 if __name__ == '__main__':
