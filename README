@@ -1,4 +1,13 @@
+Just experimenting...
+
 Sources used:
-http://invisibleroads.com/tutorials/geodjango-googlemaps-build.html
+CHERRYPY
+http://stackoverflow.com/questions/2496458/problems-serving-static-files-in-cherrypy-3-1
+http://www.cherrypy.org/wiki/StaticContent
+
+GEO
+http://dev.w3.org/geo/api/spec-source.html
 http://benwerd.com/lab/geo.php
+http://mapscripting.com/how-to-use-geolocation-in-mobile-safari
+http://invisibleroads.com/tutorials/geodjango-googlemaps-build.html
 http://code.google.com/apis/maps/documentation/javascript/tutorial.html
