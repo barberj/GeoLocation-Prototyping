@@ -10,12 +10,13 @@ function getGeoLocal(){
     }
 }
 
-var map;
+var map, marker;
 function initialize_map(position){
     map = new google.maps.Map(document.getElementById('map'), {
          zoom: 5,
          center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
          mapTypeId: google.maps.MapTypeId.ROADMAP
     });
+    marker = new google.maps.Marker({map: map, position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude)});
     alertPosition(position);
 }
