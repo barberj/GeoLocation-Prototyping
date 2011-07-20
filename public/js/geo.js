@@ -1,5 +1,5 @@
 function alertPosition(position){
-    alert("Latitude: " + position.coords.latitude + " Longitude: " + position.coords.longitude);
+    console.log("Latitude: " + position.coords.latitude + " Longitude: " + position.coords.longitude);
 }
 
 function getGeoLocal(){
@@ -13,10 +13,12 @@ function getGeoLocal(){
 var map, marker;
 function initialize_map(position){
     map = new google.maps.Map(document.getElementById('map'), {
-         zoom: 5,
+         zoom: 3,
          center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
          mapTypeId: google.maps.MapTypeId.ROADMAP
     });
-    marker = new google.maps.Marker({map: map, position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude)});
+    atlanta = new google.maps.Marker({map: map, position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude)});
+    chicago = new google.maps.Marker({map: map, position: new google.maps.LatLng(41.879535, -87.624333)});
+    new_york = new google.maps.Marker({map: map, position: new google.maps.LatLng(40.7560540, -73.9869510)});
     alertPosition(position);
 }
