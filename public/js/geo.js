@@ -17,7 +17,7 @@ function initialize_map(position){
          center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
          mapTypeId: google.maps.MapTypeId.ROADMAP
     });
-    atlanta = new google.maps.Marker({map: map, position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude)});
+    atlanta = new google.maps.Marker({map: map, icon: 'http://www.google.com/intl/en_us/mapfiles/ms/micons/blue.png', position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude)});
     chicago = new google.maps.Marker({map: map, position: new google.maps.LatLng(41.879535, -87.624333)});
     new_york = new google.maps.Marker({map: map, position: new google.maps.LatLng(40.7560540, -73.9869510)});
     alertPosition(position);
